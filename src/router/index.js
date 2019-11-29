@@ -11,6 +11,15 @@ export const HeadRoutes = [
         text: "首页"
     },
     {
+        path: "/ticket",
+        component: Ticket,
+        meta: {
+            flag: true,
+            requiredAuth: false,
+        },
+        text: "购票"
+    },
+    {
         path: "/shop",
         component: Shop,
         meta: {
@@ -26,29 +35,20 @@ export const HeadRoutes = [
         },
         text: "发现"
     },
+
+]
+
+//用来配置不带head的路由
+
+export const NoHeadRoutes = [
     {
         path: "/mine",
         component: Mine,
         meta: {
             flag: false,
             requiredAuth: false,
-        },
-        text: "我的"
+        }
     },
-    {
-        path: "/ticket",
-        component: Ticket,
-        meta: {
-            flag: true,
-            requiredAuth: false,
-        },
-        text: "购票"
-    },
-]
-
-//用来配置不带head的路由
-
-export const NoHeadRoutes = [
     {
         path: "/login",
         component: Login,
@@ -151,8 +151,13 @@ export const NoHeadRoutes = [
                 meta: {
                     flag: false,
                     requiredAuth: false
+<<<<<<< HEAD
                 },
             }
+=======
+                }
+            },
+>>>>>>> 4195110b68651852432dbac4cdd5747ca986dd94
         ]
     },
     {

@@ -4,11 +4,14 @@ export default class Loading extends Component {
     render() {
         return (
             <LoadingContainer>
-                <div className="dot white"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+                <h2>mtime</h2>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </LoadingContainer>
         )
     }
