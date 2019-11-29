@@ -1,4 +1,4 @@
-import {Home,Shop,Find,Mine,Cart,Goodslist,Goodsdetail,Registe,Login} from "../pages"
+import {Home,Shop,Find,Mine,Cart,Goodslist,Goodsdetail,Registe,Login,ActorDetail,ActorList,CinemaDetail,City,MovieDetail,MovieShow,Search,Ticket,MovieShowing,MovieComing} from "../pages"
 
 //用来配置带head的路由
 export const HeadRoutes=[
@@ -34,6 +34,15 @@ export const HeadRoutes=[
             requiredAuth:false,
         },
         text:"我的"
+    },
+    {
+        path:"/ticket",
+        component:Ticket,
+        meta:{
+            flag:true,
+            requiredAuth:false,
+        },
+        text:"购票"
     },
 ]
 
@@ -79,7 +88,77 @@ export const NoHeadRoutes=[
             flag:false,
             requiredAuth:false
         }
-    }
+    },
+    {
+        path:"/actorDetail",
+        component:ActorDetail,
+        meta:{
+            flag:false,
+            requiredAuth:false
+        }
+    },
+    {
+        path:"/actorList",
+        component:ActorDetail,
+        meta:{
+            flag:false,
+            requiredAuth:false
+        }
+    },
+    {
+        path:"/cinemaDetail",
+        component:CinemaDetail,
+        meta:{
+            flag:false,
+            requiredAuth:false
+        }
+    },
+    {
+        path:"/city",
+        component:City,
+        meta:{
+            flag:false,
+            requiredAuth:false
+        }
+    },
+    {
+        path:"/movieDetail",
+        component:MovieDetail,
+        meta:{
+            flag:false,
+            requiredAuth:false
+        }
+    },
+    {
+        path:"/movieShow",
+        component:MovieShow,
+        meta:{
+            flag:false,
+            requiredAuth:false
+        },
+        children:{
+            path:"/movieShowing",
+            component:MovieShowing,
+            meta:{
+                flag:false,
+                requiredAuth:false
+            },
+            path:"/movieComing",
+            component:MovieComing,
+            meta:{
+                flag:false,
+                requiredAuth:false
+            },
+        }
+    },
+    {
+        path:"/search",
+        component:Search,
+        meta:{
+            flag:false,
+            requiredAuth:false
+        }
+    },
 ]
 
 export const RouteConfig= HeadRoutes.concat(NoHeadRoutes);
