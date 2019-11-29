@@ -2,7 +2,10 @@ import React, { Fragment } from "react";
 import { Header, Main, Section, Footer } from "./styled"
 class Goodsdetail extends React.Component {
     constructor() {
-        super();
+        super()
+        this.state={
+
+        }
     }
     render() {
         return (
@@ -19,7 +22,7 @@ class Goodsdetail extends React.Component {
                     <div className="slide">
                         <div className="mui-slider-item mui-active">
                             <div className="posterbox">
-                                <a><img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F135733.86814649_600X600X1.jpg&amp;width=0&amp;height=0&amp;clipType=4" /></a>
+                                <a href="/abc"><img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F135733.86814649_600X600X1.jpg&amp;width=0&amp;height=0&amp;clipType=4" alt=""/></a>
                             </div>
                         </div>
                         <div className="mui-slider-indicator">
@@ -38,7 +41,7 @@ class Goodsdetail extends React.Component {
                                     <div className="mainbox td">
                                         <dl>
                                             <dt>
-                                                <a href="#">
+                                                <a href="/abc">
                                                     <em className="zy">自营</em>Mighty Jaxx 海绵宝宝系列 半解剖盲盒手办 随机发
                                                     </a>
                                                 <span className="i-c-normal" style={{ backgroundColor: "#25ACBD" }}>新品</span>
@@ -59,7 +62,7 @@ class Goodsdetail extends React.Component {
                     <aside className="cin_line" id="topAdsContainer"></aside>
                     <article className="appraise-box">
                         <div className="appraise-title">
-                            <a className="table_v_c mid">
+                            <a className="table_v_c mid" href="/abc">
                                 <p className="txt td"><b>评价晒单</b><span>(1人评论)</span></p>
                                 <p><b className="eval"><span>100%</span>好评</b>
                                     <i className="iconfont">{"\ue602"}</i></p>
@@ -69,17 +72,17 @@ class Goodsdetail extends React.Component {
                     <article id="contentRegion" className="m_bg_whiteb malletails">
                         <ul className="table tailstab">
                             <li className="td curr">
-                                <a href="#"><span>图文详情</span></a>
+                                <a href="/abc"><span>图文详情</span></a>
                             </li>
                             <li className="td">
-                                <a href="#"><span>规格参数</span></a></li>
-                            <li className="td"><a href="#"><span>购买须知</span></a></li>
-                            <li className="td" style={{display: "none"}}><a href="#"><span>活动规则</span></a></li>
+                                <a href="/abc"><span>规格参数</span></a></li>
+                            <li className="td"><a href="/abc"><span>购买须知</span></a></li>
+                            <li className="td" style={{display: "none"}}><a href="/abc"><span>活动规则</span></a></li>
                         </ul>
                         <ul className="table tailstab tabfixed" style={{display: "none"}}>
-                            <li className="td curr"><a href="#"><span>图文详情</span></a></li>
-                            <li className="td"><a href="#"><span>规格参数</span></a></li>
-                            <li className="td"><a href="#"><span>购买须知</span></a></li>
+                            <li className="td curr"><a href="/abc"><span>图文详情</span></a></li>
+                            <li className="td"><a href="/abc"><span>规格参数</span></a></li>
+                            <li className="td"><a href="/abc"><span>购买须知</span></a></li>
                         </ul>
                         <div id="goodsRelatedBlock" className="tailsmid">
                             <div className="pictails">
@@ -90,36 +93,36 @@ class Goodsdetail extends React.Component {
                                 <dl>
                                     <dt><b>随机发 拆盒不退不换</b></dt></dl>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140045.64014118_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" />
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140045.64014118_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/>
                                 </div>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140047.18388800_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" />
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140047.18388800_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/>
                                 </div>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140049.66579613_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" />
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140049.66579613_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/>
                                 </div>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140051.22065173_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" />
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140051.22065173_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/>
                                 </div>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140052.57361826_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" />
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140052.57361826_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/>
                                 </div>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140053.76490864_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" /></div>
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140053.76490864_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/></div>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140054.32592458_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" />
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140054.32592458_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/>
                                 </div>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140055.28393580_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" />
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140055.28393580_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/>
                                 </div>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140119.35460932_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" />
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140119.35460932_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/>
                                 </div>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140121.10525387_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" />
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140121.10525387_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/>
                                 </div>
                                 <div>
-                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140125.34029181_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" />
+                                    <img src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fgoods%2F2019%2F10%2F08%2F140125.34029181_1024X1024X3.jpg&amp;width=750&amp;height=0&amp;clipType=" className="m_img" alt=""/>
                                 </div>
                                 <div className="tailspara" style={{display: "none"}}></div>
                                 <ul className="m_list"></ul>
@@ -158,7 +161,7 @@ class Goodsdetail extends React.Component {
                                         <i className="i_purchase" style={{ backgroundColor: "#25ACBD" }}>新品</i>
                                     </div>
                                     <div className="picbox">
-                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F163113.61730692.jpg&amp;width=294&amp;height=294&amp;clipType=4"/>
+                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F163113.61730692.jpg&amp;width=294&amp;height=294&amp;clipType=4" alt=""/>
                                     </div>
                                     <dl className="txtbox">
                                         <dt>
@@ -176,7 +179,7 @@ class Goodsdetail extends React.Component {
                                         <i className="i_purchase" style={{ backgroundColor: "#25ACBD" }}>新品</i>
                                     </div>
                                     <div className="picbox">
-                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F111206.13576847.jpg&amp;width=294&amp;height=294&amp;clipType=4" />
+                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F111206.13576847.jpg&amp;width=294&amp;height=294&amp;clipType=4" alt=""/>
                                     </div>
                                     <dl className="txtbox">
                                         <dt><em className="zy">自营</em>猫铃铛 盲盒随机发</dt>
@@ -189,7 +192,7 @@ class Goodsdetail extends React.Component {
                                     <div className="mtips"><i className="i_purchase" style={{ backgroundColor: "#25ACBD" }}>新品</i>
                                     </div>
                                     <div className="picbox">
-                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F154904.14512080.jpg&amp;width=294&amp;height=294&amp;clipType=4" />
+                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F154904.14512080.jpg&amp;width=294&amp;height=294&amp;clipType=4" alt=""/>
                                     </div>
                                     <dl className="txtbox">
                                         <dt><em className="zy">自营</em>变色龙盲盒 第三代随机</dt>
@@ -203,7 +206,7 @@ class Goodsdetail extends React.Component {
                                         <i className="i_purchase" style={{ backgroundColor: "#25ACBD" }}>新品</i>
                                     </div>
                                     <div className="picbox">
-                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F112652.85213062.jpg&amp;width=294&amp;height=294&amp;clipType=4" />
+                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F112652.85213062.jpg&amp;width=294&amp;height=294&amp;clipType=4" alt=""/>
                                     </div>
                                     <dl className="txtbox">
                                         <dt><em className="zy">自营</em>螺旋狗盲盒</dt>
@@ -216,7 +219,7 @@ class Goodsdetail extends React.Component {
                                     <div className="mtips"><i className="i_purchase" style={{ backgroundColor: "#25ACBD" }}>新品</i>
                                     </div>
                                     <div className="picbox">
-                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F26%2F111921.29547334.jpg&amp;width=294&amp;height=294&amp;clipType=4" />
+                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F26%2F111921.29547334.jpg&amp;width=294&amp;height=294&amp;clipType=4" alt=""/>
                                     </div>
                                     <dl className="txtbox">
                                         <dt><em className="zy">自营</em>黑衣人盲盒4代随机-MIB</dt>
@@ -229,7 +232,7 @@ class Goodsdetail extends React.Component {
                                     <div className="mtips"><i className="i_purchase" style={{ backgroundColor: "#25ACBD" }}>新品</i>
                                     </div>
                                     <div className="picbox">
-                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F165024.83428400.jpg&amp;width=294&amp;height=294&amp;clipType=4" />
+                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F165024.83428400.jpg&amp;width=294&amp;height=294&amp;clipType=4" alt=""/>
                                     </div>
                                     <dl className="txtbox">
                                         <dt><em className="zy">自营</em>玩具总动员4 盲盒随机发</dt>
@@ -242,7 +245,7 @@ class Goodsdetail extends React.Component {
                                     <div className="mtips"><i className="i_purchase" style={{ backgroundColor: "#25ACBD" }}>新品</i>
                                     </div>
                                     <div className="picbox">
-                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F155827.67966521.jpg&amp;width=294&amp;height=294&amp;clipType=4" />
+                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F155827.67966521.jpg&amp;width=294&amp;height=294&amp;clipType=4" alt=""/>
                                     </div>
                                     <dl className="txtbox">
                                         <dt>
@@ -256,7 +259,7 @@ class Goodsdetail extends React.Component {
                                 <div className="mtips"><i className="i_purchase" style={{ backgroundColor: "#25ACBD" }}>新品</i>
                                 </div>
                                 <div className="picbox">
-                                    <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F103733.15873378.jpg&amp;width=294&amp;height=294&amp;clipType=4" />
+                                    <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F103733.15873378.jpg&amp;width=294&amp;height=294&amp;clipType=4" alt=""/>
                                 </div>
                                 <dl className="txtbox">
                                     <dt><em className="zy">自营</em>哥斯拉手办盲盒随机发</dt>
@@ -268,7 +271,7 @@ class Goodsdetail extends React.Component {
                                 <div className="mtips"><i className="i_purchase" style={{ backgroundColor: "#25ACBD" }}>新品</i>
                                 </div>
                                 <div className="picbox">
-                                    <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F09%2F12%2F104355.33294505.jpg&amp;width=294&amp;height=294&amp;clipType=4" />
+                                    <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F09%2F12%2F104355.33294505.jpg&amp;width=294&amp;height=294&amp;clipType=4" alt=""/>
                                 </div>
                                 <dl className="txtbox">
                                     <dt><em className="zy">自营</em>雪人奇缘手办盲盒随机发</dt>
@@ -281,7 +284,7 @@ class Goodsdetail extends React.Component {
                                     <div className="mtips"><i className="i_purchase" style={{ backgroundColor: "#25ACBD" }}>新品</i>
                                     </div>
                                     <div className="picbox">
-                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F161753.91346330.jpg&amp;width=294&amp;height=294&amp;clipType=4" />
+                                        <img className="m_img img_original_1574910690049" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmg%2F2019%2F07%2F15%2F161753.91346330.jpg&amp;width=294&amp;height=294&amp;clipType=4" alt=""/>
                                     </div>
                                     <dl className="txtbox">
                                         <dt><em className="zy">自营</em>非人哉球球扭蛋盲盒</dt>
@@ -290,7 +293,7 @@ class Goodsdetail extends React.Component {
                                 </div>
                             </li>
                         </ul>
-                        <a id="moreLoadingBtn" className="morelink" style={{ height: "0.5rem" }}>奋力加载中...</a></aside>
+                        <a id="moreLoadingBtn" className="morelink" style={{ height: "0.5rem" }} href="/abc">奋力加载中...</a></aside>
                 </Section>
                 <Footer>
                     <div className="goshare">

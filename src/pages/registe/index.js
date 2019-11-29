@@ -14,7 +14,7 @@ class Registe extends React.Component {
             <Fragment>
                 <Header>
                 <span><i className="iconfont">{"\ue600"}</i></span>
-                   <img src="https://static1.mtime.cn/html5/20191122140130/images/2014/logo_mtime.png" />
+                   <img src="https://static1.mtime.cn/html5/20191122140130/images/2014/logo_mtime.png" alt=""/>
                     <span>&nbsp;</span>
                 </Header>
                 <Main>
@@ -33,10 +33,10 @@ class Registe extends React.Component {
         )
     }
     handleUser(e){
-        let value=e.target.value;
+        // let value=e.target.value;
     }
     handlePwd(e){
-        let value=e.target.value;
+        // let value=e.target.value;
     }
 }
 

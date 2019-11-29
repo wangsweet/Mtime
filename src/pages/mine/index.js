@@ -1,8 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Main, Section } from "./styled"
 class Mine extends React.Component {
     constructor() {
-        super();
+        super()
+        this.state={
+
+        }
     }
     render() {
         return (

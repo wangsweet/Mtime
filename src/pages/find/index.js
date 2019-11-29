@@ -1,8 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Main ,Section} from "./styled";
 class Find extends React.Component {
     constructor() {
-        super();
+        super()
+        this.state={
+
+        }
     }
     render() {
         return (
@@ -10,22 +13,22 @@ class Find extends React.Component {
                 <nav className="newsnav">
                     <ul className="table_v_c">
                         <li className="td curr">
-                            <a href="#!/news/">
+                            <a href="/new">
                                 <span>新闻</span>
                             </a>
                         </li>
                         <li className="td">
-                            <a href="#!/trailer/">
+                            <a href="/yugao">
                                 <span>预告片</span>
                             </a>
                         </li>
                         <li className="td">
-                            <a href="#!/toplist/">
+                            <a href="/sort">
                                 <span>排行榜</span>
                             </a>
                         </li>
                         <li className="td">
-                            <a href="#!/review/">
+                            <a href="/command">
                                 <span>影评</span>
                             </a>
                         </li>
@@ -48,16 +51,16 @@ class Find extends React.Component {
                                         <h2>王珞丹谭卓文淇 三人合体大片惊艳亮相</h2>
                                         <p></p>
                                         <div className="table piclist">
-                                            <p className="td"><img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F152411.21777907.jpg&amp;width=190&amp;height=130&amp;clipType=4" /></p>
-                                            <p className="td"><img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F152415.93882911.jpg&amp;width=190&amp;height=130&amp;clipType=4" /></p>
-                                            <p className="td"><img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F152415.43161897.jpg&amp;width=190&amp;height=130&amp;clipType=4" /></p>
+                                            <p className="td"><img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F152411.21777907.jpg&amp;width=190&amp;height=130&amp;clipType=4" alt=""/></p>
+                                            <p className="td"><img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F152415.93882911.jpg&amp;width=190&amp;height=130&amp;clipType=4" alt=""/></p>
+                                            <p className="td"><img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F152415.43161897.jpg&amp;width=190&amp;height=130&amp;clipType=4" alt=""/></p>
                                         </div>
                                         <p><time>9分钟前</time></p>
                                     </div>
                                 </div>
                                 <div className="table">
                                     <div className="todaypic">
-                                        <img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F183605.58784611.jpg&amp;width=225&amp;height=156&amp;clipType=4" />
+                                        <img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F183605.58784611.jpg&amp;width=225&amp;height=156&amp;clipType=4" alt=""/>
                                     </div>
                                     <div className="todaytxt">
                                         <h2>专访《睡梦医生》伊万麦克格雷格</h2>
@@ -67,7 +70,7 @@ class Find extends React.Component {
                                 </div>
                                 <div>
                                     <div className="todaypic_bigimg">
-                                        <img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F180000.91850596.jpg&amp;width=370&amp;height=180&amp;clipType=4" />
+                                        <img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F180000.91850596.jpg&amp;width=370&amp;height=180&amp;clipType=4" alt=""/>
                                         <i className="video_icon"></i>
                                     </div>
                                     <div className="todaytxt">

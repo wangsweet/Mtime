@@ -2,7 +2,10 @@ import React, { Fragment } from "react";
 import { Header, Main } from "./styled";
 class Cart extends React.Component {
     constructor() {
-        super();
+        super()
+        this.state={
+
+        }
     }
     render() {
         return (
@@ -17,7 +20,7 @@ class Cart extends React.Component {
                         <i className="i_emptycate"></i>
                         <p>购物车还是空的，快去挑几件中意的商品吧</p>
                         <div className="bigbtn">
-                            <a className="btn_hui">去购物</a>
+                            <a className="btn_hui" href="/shop">去购物</a>
                         </div>
                     </div>
                 </Main>
