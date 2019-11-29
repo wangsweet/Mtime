@@ -11,11 +11,14 @@ height:100%;
     display:flex;
     align-items:center;
     .cityshow{
-        b{
-            font-weight:400;
-            margin-right:.05rem;
-            font-size:.14rem;
-        }
+        a{
+            b{
+                font-weight:400;
+                margin-right:.05rem;
+                font-size:.14rem;
+            }
+            color:#333;
+      }
     }
     .input_search{
         padding:0 0.252rem 0 0;

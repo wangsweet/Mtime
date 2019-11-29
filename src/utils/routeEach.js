@@ -42,7 +42,7 @@ export default (routes) => {
                                 if (child.children) {
                                     return childrenMap(child);
                                 } else {
-                                    return <Route path={child.path} key={child.path} render={() => {
+                                    return <Route path={child.path} key={child.path}render={() => {
                                         return isLogin(child)
                                     }} />
                                 }
