@@ -8640,7 +8640,7 @@ react-router@5.1.2:
 
 react-scripts@^3.2.0:
   version "3.2.0"
-  resolved "https://registry.npm.taobao.org/react-scripts/download/react-scripts-3.2.0.tgz#58ccd6b4ffa27f1b4d2986cbdcaa916660e9e33c"
+  resolved "https://registry.npm.taobao.org/react-scripts/download/react-scripts-3.2.0.tgz?cache=0&sync_timestamp=1573772117117&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-scripts%2Fdownload%2Freact-scripts-3.2.0.tgz#58ccd6b4ffa27f1b4d2986cbdcaa916660e9e33c"
   integrity sha1-WMzWtP+ifxtNKYbL3KqRZmDp4zw=
   dependencies:
     "@babel/core" "7.6.0"

@@ -2,6 +2,7 @@ import React from "react";
 import { HeadRoutes } from "../../router"
 import {withRouter} from "react-router-dom"
 import {Header} from "./styled.js";
+@withRouter
 class Head extends React.Component {
     constructor() {
         super()
@@ -28,5 +29,5 @@ class Head extends React.Component {
 }
 
 
-export default withRouter(Head);
+export default Head;
 

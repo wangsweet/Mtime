@@ -29,9 +29,10 @@
 - @babel/plugin-proposal-decorators 
 - react-scripts 
 - @babel/plugin-syntax-jsx
+- @babel/helper-create-regexp-features-plugin
 
 
-`yarn add http-proxy-middleware react-app-rewired customize-cra babel-plugin-import @babel/plugin-proposal-decorators react-scripts @babel/plugin-syntax-jsx --dev`
+`yarn add http-proxy-middleware react-app-rewired customize-cra babel-plugin-import @babel/plugin-proposal-decorators react-scripts @babel/plugin-syntax-jsx @babel/helper-create-regexp-features-plugin --dev`
 
 # 调试工具
 
