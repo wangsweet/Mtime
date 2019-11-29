@@ -20,12 +20,16 @@ export const Header = styled.div`
             }
         }
         li{
-        float:left;
-        width:14%;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        height:0.478rem;
-    }
+            float:left;
+            width:14%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:0.478rem;
+            a{
+                font-size:.32rem;
+                color:#fff;
+            }
+        }
     } 
 `
