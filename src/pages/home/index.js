@@ -12,7 +12,7 @@ class Home extends React.Component {
             <Main>
                 <div className="hea_search">
                     <div className="cityshow">
-                        <b>北京</b><i className="iconfont">{"\ue633"}</i>
+                        <a href="#/city"><b>北京</b><i className="iconfont">{"\ue633"}</i></a>
                     </div>
                     <p className="input_search"><i className="iconfont">{"\ue623"}</i><span>影片/影院/影人，任你搜</span></p>
                 </div>
