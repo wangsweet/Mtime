@@ -151,13 +151,8 @@ export const NoHeadRoutes = [
                 meta: {
                     flag: false,
                     requiredAuth: false
-<<<<<<< HEAD
-                },
-            }
-=======
                 }
             },
->>>>>>> 4195110b68651852432dbac4cdd5747ca986dd94
         ]
     },
     {
