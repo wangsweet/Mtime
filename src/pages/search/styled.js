@@ -19,14 +19,22 @@ export const Header = styled.div`
 `
 
 export const Searchs = styled.div`
+    position:relative;
     input{
         border: 1px solid #bbb;
         display:inline-block;
-        width:2.2rem;
+        width:2rem;
         height:.318rem;
         border-radius:.1rem;
-        padding-left:.1rem;
+        padding-left:.3rem;
         font-size:.14rem;
+    }
+    div{
+        position:absolute;
+        top:.075rem;
+        left:.1rem;
+        z-index:10;
+        color:#000 !important;
     }
 `
 

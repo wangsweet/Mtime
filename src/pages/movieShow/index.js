@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Table, Search, } from "./styled"
-import Show from "../../components/movie/movieShowing"
+//import Show from "../../components/movie/movieShowing"
 import Come from "../../components/movie/movieComing"
 class Movies extends React.Component {
     constructor() {

@@ -16,7 +16,8 @@ class City extends React.Component{
                     <span></span>
                 </Header>
                 <Search>
-                    <input type="text" className="iconfont" placeholder={"\ue623"+"请输入搜索关键词"}/>
+                    <input type="text"  placeholder="请输入搜索关键词"/>
+                    <div className="iconfont">{"\ue623"}</div>
                 </Search>
                 <ul>
                     <li>

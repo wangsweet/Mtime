@@ -19,14 +19,22 @@ export const Search = styled.div`
     justify-content:center;
     align-items:center;
     background:#f6f6f6;
+    position:relative;
     input{
         border: 1px solid #bbb;
         display:inline-block;
-        width:80%;
+        width:70%;
         margin-left:5%;
         height:.336rem;
         border-radius:.1rem;
-        padding-left:.1rem;
+        padding-left:.3rem;
+    }
+    div{
+        position:absolute;
+        top:.125rem;
+        left:.45rem;
+        z-index:10;
+        color:#000 !important;
     }
 `
 

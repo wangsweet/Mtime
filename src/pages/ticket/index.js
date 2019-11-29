@@ -13,7 +13,8 @@ class Ticket extends React.Component {
                 <Header>
                     <span>深圳</span>
                     <Searchs>
-                        <input type="text" className="iconfont" placeholder={"\ue623" + "筛选影院"} />
+                        <input type="text"  placeholder="筛选影院"/>
+                        <div className="iconfont">{"\ue623"}</div>
                     </Searchs>
                     <span>搜索</span>
                 </Header>

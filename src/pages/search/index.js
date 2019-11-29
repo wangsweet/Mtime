@@ -13,7 +13,8 @@ class Search extends React.Component {
                 <Header>
                     <span className="iconfont">{"\ue600"}</span>
                     <Searchs>
-                        <input type="text" className="iconfont" placeholder={"\ue623" + "影片/影院/影人，任你搜"} />
+                        <input type="text"  placeholder="影片/影院/影人，任你搜" />
+                        <div className="iconfont">{"\ue623"}</div>
                     </Searchs>
                     <span>搜索</span>
                 </Header>
