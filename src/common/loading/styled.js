@@ -3,52 +3,61 @@ import styled, { keyframes } from "styled-components";
 
 
 
-const rotate = keyframes`
-    0% { transform: rotate(0); }
-    10 % { width: 6.250em; height: 6.250em; }
-    66 % { width: 2.4em; height: 2.4em; }
-    100 % { transform: rotate(360deg); width: 6.250em; height: 6.250em; }
-`
-
-const dotsY = keyframes`
-    66% { opacity: .1; width: 2.4em; }
-    77 % { opacity: 1; width: 0; }
-`
-const dotsX = keyframes`
-    66% { opacity: .1; height: 2.4em; }
-77 % { opacity: 1; height: 0; }
-`
-
-const flash = keyframes`
-    33% { opacity: 0; border- radius: 0 %; }
-55 % { opacity: .6; border- radius: 100 %; }
-66 % { opacity: 0; }
+const loading = keyframes`
+    0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 `
 
 export const LoadingContainer = styled.div`
-    position: absolute;
-    margin: auto;
-    top: 0; bottom: 0; left: 0; right: 0;
-    width: 6.250em; height: 6.250em;
-    animation: ${rotate} 2.4s linear infinite;
-    .white { 
-        top: 0; bottom: 0; left: 0; right: 0; 
-        background: white; 
-        animation: ${flash} 2.4s linear infinite;
-        opacity: 0;
-    }
-    .dot {
-        position: absolute;
-        margin: auto;
-        width: 2.4em; height: 2.4em;
-        border-radius: 100%;
-        transition: all 1s ease;
-    }
-    .dot:nth-child(2) { top: 0; bottom: 0; left: 0; background: #FF4444; animation: ${dotsY} 2.4s linear infinite; }
-.dot:nth-child(3) { left: 0; right: 0; top: 0; background: #FFBB33; animation: ${dotsX} 2.4s linear infinite; }
-.dot:nth-child(4) { top: 0; bottom: 0; right: 0; background: #99CC00; animation: ${dotsY} 2.4s linear infinite; }
-.dot:nth-child(5) { left: 0; right: 0; bottom: 0; background: #33B5E5; animation: ${dotsX} 2.4s linear infinite; }
-
+  /* background: #222; */
+  text-align: center;
+  padding: 20%;
+  margin-top:50%;
+  h2 {
+  color: #333;
+  margin: 0;
+  font: 1.2em verdana;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  margin: .19em;
+  background: #b66fff;
+  border-radius: .6em;
+  animation: ${loading} 1s infinite alternate;
+}
+ span:nth-of-type(2) {
+  background: #a349ff;
+  animation-delay: 0.2s;
+}
+ span:nth-of-type(3) {
+  background: #8720f0;
+  animation-delay: 0.4s;
+}
+ span:nth-of-type(4) {
+  background: #6400c9;
+  animation-delay: 0.6s;
+}
+ span:nth-of-type(5) {
+  background: #8720f0;
+  animation-delay: 0.8s;
+}
+ span:nth-of-type(6) {
+  background: #a349ff;
+  animation-delay: 1.0s;
+}
+ span:nth-of-type(7) {
+  background: #b66fff;
+  animation-delay: 1.2s;
+}
 `
 
 
