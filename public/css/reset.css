@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+i {
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+html {
+    font-size: 31.25vw;
+}
+
+body {
+    font-size: 16px;
+}
+#root{
+    height:100%;
+}
