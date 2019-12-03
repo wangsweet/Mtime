@@ -2,6 +2,6 @@ import http from "../utils/request"
 
 export const cityAll=()=>http({
     method:"get",
-    url: "/api/cityList",
+    url: "/maoyan/api/cityList",
    
 })

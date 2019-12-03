@@ -1,5 +1,10 @@
 import React from "react";
 import { Main, Section } from "./styled"
+import { connect } from "react-redux";
+import { mapStateToProps, mapDispatchToProps } from "./mapStore"
+import { withRouter } from "react-router-dom"
+@withRouter
+@connect(mapStateToProps, mapDispatchToProps)
 class Home extends React.Component {
     constructor() {
         super()
@@ -8,6 +13,8 @@ class Home extends React.Component {
         }
     }
     render() {
+        let { movie } = this.props;
+        // console.log(movie);
         return (
             <Main>
                 <div className="hea_search">
@@ -17,56 +24,14 @@ class Home extends React.Component {
                     <p className="input_search"><i className="iconfont">{"\ue623"}</i><span>影片/影院/影人，任你搜</span></p>
                 </div>
                 <article className="indexmovie">
-                    <h2><b>正在热映（56部）</b><i className="iconfont">{"\ue602"}</i></h2>
+                    <h2 onClick={this.handleMovienow.bind(this)}><b>正在热映（56部）</b><i className="iconfont">{"\ue602"}</i></h2>
                     <ul>
-                        <li>
+                       {movie.map((item)=>(<li key={item.id} onClick={this.handleDetail.bind(this,item.id)}> 
                             <div className="mpic">
-                                <img src="https://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2019%2F11%2F20%2F143123.82272014_1280X720X2.jpg&width=130&height=195&clipType=4" className="img_box" alt=""/><em className="m_score"><i>7.4</i></em>
+                                <img src={item.img.replace(/w\.h/,71.116)} className="img_box" alt=""/><em className="m_score"><i>{item.sc.toFixed(1)}</i></em>
                             </div>
-                            <p><span>冰雪奇缘2</span></p>
-                        </li>
-                        <li>
-                            <div className="mpic">
-                                <img src="https://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2019%2F11%2F20%2F143123.82272014_1280X720X2.jpg&width=130&height=195&clipType=4" className="img_box" alt=""/><em className="m_score"><i>7.4</i></em>
-                            </div>
-                            <p><span>冰雪奇缘2</span></p>
-                        </li>
-                        <li>
-                            <div className="mpic">
-                                <img src="https://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2019%2F11%2F20%2F143123.82272014_1280X720X2.jpg&width=130&height=195&clipType=4" className="img_box" alt=""/><em className="m_score"><i>7.4</i></em>
-                            </div>
-                            <p><span>冰雪奇缘2</span></p>
-                        </li>
-                        <li>
-                            <div className="mpic">
-                                <img src="https://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2019%2F11%2F20%2F143123.82272014_1280X720X2.jpg&width=130&height=195&clipType=4" className="img_box" alt=""/><em className="m_score"><i>7.4</i></em>
-                            </div>
-                            <p><span>冰雪奇缘2</span></p>
-                        </li>
-                        <li>
-                            <div className="mpic">
-                                <img src="https://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2019%2F11%2F20%2F143123.82272014_1280X720X2.jpg&width=130&height=195&clipType=4" className="img_box" alt=""/><em className="m_score"><i>7.4</i></em>
-                            </div>
-                            <p><span>冰雪奇缘2</span></p>
-                        </li>
-                        <li>
-                            <div className="mpic">
-                                <img src="https://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2019%2F11%2F20%2F143123.82272014_1280X720X2.jpg&width=130&height=195&clipType=4" className="img_box" alt=""/><em className="m_score"><i>7.4</i></em>
-                            </div>
-                            <p><span>冰雪奇缘2</span></p>
-                        </li>
-                        <li>
-                            <div className="mpic">
-                                <img src="https://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2019%2F11%2F20%2F143123.82272014_1280X720X2.jpg&width=130&height=195&clipType=4" className="img_box" alt=""/><em className="m_score"><i>7.4</i></em>
-                            </div>
-                            <p><span>冰雪奇缘2</span></p>
-                        </li>
-                        <li>
-                            <div className="mpic">
-                                <img src="https://imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fmt%2F2019%2F11%2F20%2F143123.82272014_1280X720X2.jpg&width=130&height=195&clipType=4" className="img_box" alt=""/><em className="m_score"><i>7.4</i></em>
-                            </div>
-                            <p><span>冰雪奇缘2</span></p>
-                        </li>
+                            <p><span>{item.nm}</span></p>
+                        </li>))}
                     </ul>
                 </article>
                 <article className="indexmovie indexclick"><h2><b>即将上映（67部）</b><i className="iconfont">{"\ue602"}</i></h2></article>
@@ -121,6 +86,15 @@ class Home extends React.Component {
                 </Section>
             </Main>
         )
+    }
+    componentDidMount() {
+        this.props.handlemovieAsyncData();
+    }
+    handleDetail(id){
+        this.props.history.push("/movieDetail/"+id)
+    }
+    handleMovienow(){
+        this.props.history.push("/movieShow");
     }
 }
 

@@ -23,7 +23,6 @@ color:#fff;
             span{
                 color: #777;
                 font-size:.14rem;
-                padding-right:.2rem;
             }
         }
         .drawer{
@@ -62,8 +61,9 @@ export const Nav = styled.div`
         a{
             text-align: left;
             position: relative;
+            color:#333;
             span {
-                    font-size: .15rem;
+                    font-size: .13rem;
                 }
             i{
                 font-size: .12rem;
@@ -118,6 +118,8 @@ export const Main = styled.div`
         position: relative;
         background-color: #fff;
         margin-bottom: .06rem;
+        a{
+        color:#333;
         .goodsbox {
             background: #fff;
             position: relative;
@@ -150,7 +152,6 @@ export const Main = styled.div`
                 font-size: .11rem;
                 line-height: .15rem;
                 min-height: .3rem;
-                overflow: hidden;
                 text-overflow: ellipsis;
                 margin-bottom: .02rem;
             }
@@ -176,6 +177,7 @@ export const Main = styled.div`
                 }
             }
         }
+    }
     }
 }
 .morelink {

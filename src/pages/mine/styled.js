@@ -15,7 +15,6 @@ width:100%;
         width:100%;
         padding-top:0.432rem;
         display:flex;
-        justify-content:center;
         .i_set_face {
             border-radius: 0.12rem;
             width: 0.6719rem;
