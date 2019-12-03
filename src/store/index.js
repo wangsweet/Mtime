@@ -1,4 +1,4 @@
-const store = createStore(reducers,applyMiddleware(reduxThunk))
+
 import { createStore, combineReducers, applyMiddleware } from "redux"
 import reduxThunk from "redux-thunk";
 import {composeWithDevTools} from "redux-devtools-extension"
