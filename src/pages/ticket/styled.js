@@ -9,7 +9,8 @@ export const Header = styled.div`
     padding:0 .1rem;
 
     .iconfont{
-        color:#fff;
+        color:#999;
+        font-size:.14rem;
     }
     span:last-of-type{
         border:1px solid #fff;
@@ -81,8 +82,8 @@ export const Cinema = styled.div`
         }
         >span:first-of-type{
             padding:0 .05rem;
-            border:1px solid #d8d8d8;
             font-size:.1rem;
+            color:#999;
         }
         >span:last-of-type{
             position:absolute;
@@ -90,5 +91,48 @@ export const Cinema = styled.div`
             right:.1rem;
             color: #ff8600;
         }
+    }
+`
+
+export const Brand=styled.div`
+    overflow:scroll;
+    position:absolute;
+    padding:0 .15rem;
+    margin:1.4rem 0 1.8rem 0;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:90%;
+    background:#f6f6f6;
+    z-index:10;
+    li{
+        border-bottom:1px solid #ddd;
+        padding:.1rem 0;
+        display:flex;
+        justify-content:space-between;
+        font-size:.14rem;
+        color:#999;
+    }
+`
+export const Part=styled.div`
+    overflow:scroll;
+    position:absolute;
+    padding:0 .15rem;
+    margin:1.4rem 0 1.8rem 0;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:90%;
+    background:#f6f6f6;
+    z-index:10;
+    li{
+        border-bottom:1px solid #ddd;
+        padding:.1rem 0;
+        display:flex;
+        justify-content:space-between;
+        font-size:.14rem;
+        color:#999;
     }
 `

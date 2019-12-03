@@ -76,3 +76,64 @@ export const Hot = styled.div`
     }
     border-bottom:1px solid #eee;
 `
+export const Movie = styled.div`
+    display:flex;
+    padding:.15rem;
+    img{
+        width:.64rem;
+        height:.9rem;
+        margin-right:.1rem;
+    }
+    div{
+        p:nth-of-type(1){
+            font-size:.16rem;
+            font-weight:bold;
+            width:2.1rem;
+            display:flex;
+            justify-content:space-between;
+            span{
+                color: #fa0;
+                font-weight:normal;
+            }
+        }
+        p:nth-of-type(2){
+            font-size:.12rem;
+            margin:.05rem 0;
+        }
+        p:nth-of-type(3){
+            font-size:.12rem;
+            margin-bottom:.03rem;
+        }
+        p:nth-of-type(4){
+            font-size:.12rem;
+        }
+    }
+`
+export const Cinema = styled.div`
+    padding:.15rem;
+    p:nth-of-type(1){
+        font-size:.16rem;
+        display:flex;
+        width:100%;
+        justify-content:space-between;
+        margin-bottom:.1rem;
+        span{
+            color: #ef4238;
+        }
+    }
+    p:nth-of-type(2){
+        font-size:.13rem;
+        display:flex;
+        width:100%;
+        color:#999;
+        justify-content:space-between;
+        >span:first-of-type{
+            width:60%;
+            font-size:.13rem;
+            overflow:hidden;
+            white-space:nowrap; 
+            text-overflow:ellipsis; 
+        }
+         
+    }
+`

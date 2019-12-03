@@ -26,16 +26,18 @@ export const Main = styled.div`
             margin-bottom:.1rem;
             >span{
                 margin-left:.1rem;
-                padding:.01rem;
+                padding:.02rem;
                 background-color:#659d0e;
                 color:#fff;
                 font-size:.12rem;
+                display:inline-block;
             }
         }
         >div p{
             color:#659d0e;
             font-size:.12rem;
             margin-bottom:.1rem;
+            padding:0 .1rem 0 0;
         }
         >div h3 img{
             height:.15rem;

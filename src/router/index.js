@@ -106,7 +106,7 @@ export const NoHeadRoutes = [
         }
     },
     {
-        path: "/cinemaDetail",
+        path: "/cinemaDetail/:id",
         component: CinemaDetail,
         meta: {
             flag: false,
@@ -122,7 +122,7 @@ export const NoHeadRoutes = [
         }
     },
     {
-        path: "/movieDetail",
+        path: "/movieDetail/:id",
         component: MovieDetail,
         meta: {
             flag: false,
@@ -138,7 +138,7 @@ export const NoHeadRoutes = [
         },
         children: [
             {
-                path: "/movieShowing",
+                path: "/movieShow/movieShowing",
                 component: MovieShowing,
                 meta: {
                     flag: false,
@@ -146,13 +146,13 @@ export const NoHeadRoutes = [
                 }
             },
             {
-                path: "/movieComing",
+                path: "/movieShow/movieComing",
                 component: MovieComing,
                 meta: {
                     flag: false,
                     requiredAuth: false
                 }
-            },
+            }
         ]
     },
     {

@@ -38,7 +38,7 @@ export const Introduce = styled.div`
     }
     >div p:nth-of-type(3){
         color:#000;
-        margin-top:.2rem;
+        margin-top:.28rem;
         font-size:.12rem;
         font-weight:bold;
     }
@@ -129,44 +129,20 @@ export const Plot = styled.div`
         height:auto;
         display:inline-block;
         font-size:.13rem;
-        color:#666
+        color:#666;
+        text-indent:.24rem;
     }
 `
 
 export const ActorTable = styled.div`
-    padding:.15rem .15rem;
-    >div:first-of-type{
-        display:flex;
-        justify-content:space-between;
-        font-weight:bold;
-        margin-bottom:.1rem;
+    position:relative;
+    video{
+        padding:.15rem;
+        width:90vw;
+        object-fit:fill;
     }
-    >div:last-of-type{
-        display:flex;
-        font-size:.12rem;
-        flex-direction:row;
-        >div:first-of-type{
-            width:.85rem;
-            height:2.35rem;
-            padding-right:.1rem;
-            border-right:1px solid #d8d8d8;
-            margin-right:.1rem
-        }
-        >div:first-of-type img{
-            width:.85rem;
-            height:1.3rem;
-            margin-top:.01rem;
-            margin-bottom:.02rem;
-        }
-    }
-    .main-actor{
-        display:flex;
-        flex-direction:row;
-    }
-    .main-actor img{
-        width:.85rem;
-        height:.85rem;
-        margin:.01rem .1rem .02rem 0;
+    .videoDownload{
+        display:none;
     }
 `
 export const MoviePic = styled.div`

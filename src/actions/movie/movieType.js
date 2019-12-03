@@ -1,0 +1,6 @@
+export const movieShow="movie_show"
+export const movieCome="movie_come"
+export const movieDetail="movie_detail"
+export const showFlag="show_flag"
+export const comeFlag="come_flag"
+export const searchMovie="search_movie"

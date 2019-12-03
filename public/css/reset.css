@@ -35,3 +35,6 @@ body {
 #root{
     height:100%;
 }
+#video_download_toolbar_shadow{
+    position: relative;
+}

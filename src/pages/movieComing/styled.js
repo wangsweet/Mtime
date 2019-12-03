@@ -58,6 +58,7 @@ export const Mains = styled.div`
         color: #659c0d;
         padding:.06rem .12rem;
         text-align:center;
-        border-radius:.2rem;    
+        border-radius:.2rem; 
+        width:.8rem;   
     }
 `

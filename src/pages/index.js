@@ -72,10 +72,10 @@ export const Ticket=Loadable({
     loading:Loading
 })
 export const MovieShowing=Loadable({
-    loader:()=>import("../components/movie/movieShowing"),
+    loader:()=>import("./movieShowing"),
     loading:Loading
 })
 export const MovieComing=Loadable({
-    loader:()=>import("../components/movie/movieComing"),
+    loader:()=>import("./movieComing"),
     loading:Loading
 })

@@ -22,7 +22,7 @@ export const Table = styled.ul`
     position: relative;
     display:flex;
     flex-direction: row;
-    >li{
+    li a{
         border-radius: .4rem;
         display: block;
         color: #999;
@@ -31,6 +31,9 @@ export const Table = styled.ul`
         height:.268rem;
         font-size:.14rem;
         line-height:.268rem;  
+    }
+    .active{
+        background:#f6f6f6;
     }
 `
 

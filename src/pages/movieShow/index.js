@@ -1,33 +1,38 @@
 import React from "react";
 import { Header, Table, Search, } from "./styled"
-//import Show from "../../components/movie/movieShowing"
-import Come from "../../components/movie/movieComing"
+import { Link,withRouter } from "react-router-dom"
+import { mapStateToProps, mapDispatchToProps } from "./mapStore"
+import { connect } from "react-redux"
+@connect(mapStateToProps, mapDispatchToProps)
+@withRouter
 class Movies extends React.Component {
     constructor() {
         super()
         this.state = {
-
         }
     }
     render() {
+        let { flag } = this.props
         return (
             <div>
                 <Header>
                     <span className="iconfont">{"\ue600"}</span>
                     <Table>
-                        <li>正在热映</li>
-                        <li>即将上映</li>
+                        <li><Link to="/movieShow/movieShowing" className={flag ? 'active' : ''} onClick={this.props.handleShow.bind(this,1)}>正在热映</Link></li>
+                        <li><Link to="/movieShow/movieComing" className={!flag ? 'active' : ''} onClick={this.props.handleCome.bind(this,0)}>即将上映</Link></li>
                     </Table>
                     <span></span>
                 </Header>
                 <Search>
-                    <span>北京</span>
-                    <p><span></span>影片/影院/影人，任你搜</p>
+                <span><Link to="/city" className="iconfont">{this.props.cityName}{"\ue616"}</Link></span>
+                    <p onClick={this.gosearch.bind(this)}><span></span>影片/影院/影人，任你搜</p>
                 </Search>
-                {/* <Show></Show> */}
-                <Come></Come>
+
             </div>
         )
+    }
+    gosearch(){
+        this.props.history.push("/search")
     }
 }
 export default Movies

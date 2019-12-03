@@ -48,12 +48,13 @@ export const FirstName=styled.div`
 `
 
 export const CityName=styled.div`
-    padding:0 .15rem;
+    padding:.05rem .15rem;
     >span{
-        width:25%;
+        width:32%;
         display:inline-block;
         font-size:.14rem;
         line-height:.25rem;
         text-align:center;
+        margin:.03rem 0;
     }
 `
