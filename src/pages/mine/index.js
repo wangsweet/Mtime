@@ -1,13 +1,17 @@
 import React from "react";
 import { Main, Section } from "./styled"
+import { withRouter } from "react-router-dom"
+import Cookies from "js-cookie"
+@withRouter
 class Mine extends React.Component {
-    constructor() {
+    constructor(){
         super()
         this.state={
-
+            name:sessionStorage.getItem("name")
         }
     }
     render() {
+        let {name} =this.state;
         return (
             <Main>
                 <article className="set_login set_endlogin">
@@ -17,14 +21,14 @@ class Mine extends React.Component {
                         </i>
                         <dl>
                             <dt>
-                                <i className="i_grade">M0</i><b>183****7706_72804284</b></dt>
+                                <i className="i_grade">M0</i><b>{name}</b></dt>
                             <dd><b>余额：¥0</b></dd>
                         </dl>
                     </div>
                 </article>
                 <div className="my_shoptool">
                     <ul className="table_vh_c">
-                        <li id="liShoppingCart">
+                        <li id="liShoppingCart" onClick={this.handleGoCart.bind(this)}>
                             <span><i className="iconfont">{"\ue604"}</i></span>
                             <p>购物车</p>
                         </li>
@@ -76,11 +80,19 @@ class Mine extends React.Component {
                         </ul>
                         <aside className="cin_line"><p></p><p></p></aside>
                         <div className="exit" id="logout">
-                            <span>退出登录</span>
+                            <span onClick={this.handleExit.bind(this)}>退出登录</span>
                         </div></article>
                 </Section>
             </Main>
         )
+    }
+    handleExit(){
+        Cookies.remove("token");
+        sessionStorage.removeItem("name");
+        this.props.history.push("/login");
+    }
+    handleGoCart(){
+        this.props.history.push("/cart");
     }
 }
 

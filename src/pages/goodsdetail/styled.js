@@ -46,6 +46,7 @@ export const Main = styled.div`
     display: block;
     overflow: hidden;
     margin: auto;
+    color:#333;
     }
     img {
         width: auto;
@@ -175,7 +176,7 @@ export const Main = styled.div`
         position: relative;
         height:.20rem;
         .table_v_c {
-            
+           color:#333;
            height:100%;
            display:flex;
            justify-content:space-between;
@@ -205,7 +206,7 @@ export const Main = styled.div`
             font-size: .13rem;
             float:left;
             width:33%;
-            a {
+           p {
                 color: #333;
                 display: block;
                 position: relative;
@@ -230,7 +231,7 @@ export const Main = styled.div`
                 }
             }
         }
-        li.curr a {
+        li.curr p {
             color: #ff8600;
             span:after{
                 background: #ff8600;
@@ -345,6 +346,7 @@ export const Section = styled.div`
         li:nth-child(odd) {
         margin-right: .75%;
     }
+    a{color:#333;}
     li {
         width: 49.25%;
         min-height: 2.64rem;
@@ -384,7 +386,6 @@ export const Section = styled.div`
                 font-size: .11rem;
                 line-height: .15rem;
                 min-height: .3rem;
-                overflow: hidden;
                 text-overflow: ellipsis;
                 margin-bottom: .02rem;
             }

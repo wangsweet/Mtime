@@ -25,7 +25,6 @@ background: #f6f6f6;
             span{
                 color: #777;
                 font-size:.14rem;
-                padding-right:.3rem;
             }
         }
         .cart{
@@ -306,10 +305,14 @@ export const Nav=styled.div`
             justify-content:center;
             flex-direction:column;
             align-items:center;
-            img{
+            a{
+                color:#333;
+              img{
                 width:0.48rem;
                 height:0.48rem;
+            }  
             }
+            
         }
     }
 }
@@ -416,6 +419,9 @@ export const Section=styled.div`
     position: relative;
     padding: 0.096rem 0;
     background-color: #f6f6f6;
+    a{
+        color:#333;
+    }
     h2 {
         padding: .06rem 0;
         .i_reco:first-child {
@@ -466,6 +472,9 @@ export const Section=styled.div`
     position: relative;
         li:nth-child(odd) {
         margin-right: .75%;
+    }
+    a{
+        color:#333;
     }
     li {
         width: 49.25%;

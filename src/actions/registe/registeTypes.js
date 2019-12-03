@@ -1,0 +1,1 @@
+export const registeUpdateType = "REGISTE_Update_TYPE";

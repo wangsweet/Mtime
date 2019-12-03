@@ -56,8 +56,12 @@ height:100%;
                 float: left;
                 width: 25%;
                 text-align: center;
+                overflow:hidden;
                .mpic {
                     position: relative;
+                    overflow:hidden;
+                    width:0.71rem;
+                    height:.98rem;
                     img {
                         width: 100%;
                         border: 1px solid #ddd;
@@ -81,10 +85,9 @@ height:100%;
                 }
                 p {
                     padding:.06rem 0 0;
-                    width: 0.75rem;
+                    width: 0.69rem;
                     margin-bottom:0.12rem;
-                    height: 0.38rem;
-                    overflow: hidden;
+                    height: 0.5rem;
                     text-align:center;
                     span{
                         font-size:0.14rem;
@@ -151,7 +154,7 @@ export const Section = styled.div`
             p{
                 float:left;
                 padding:0.048rem 0;
-                width: 0.93rem;
+                width: 0.89rem;
                 margin: auto;
                 height: 0.78rem;
                 overflow: hidden;

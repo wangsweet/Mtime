@@ -46,7 +46,7 @@ export const NoHeadRoutes = [
         component: Mine,
         meta: {
             flag: false,
-            requiredAuth: false,
+            requiredAuth: true,
         }
     },
     {
@@ -74,7 +74,7 @@ export const NoHeadRoutes = [
 
     },
     {
-        path: "/goodslist",
+        path: "/goodslist/:cid",
         component: Goodslist,
         meta: {
             flag: false,
@@ -82,7 +82,7 @@ export const NoHeadRoutes = [
         }
     },
     {
-        path: "/goodsdetail",
+        path: "/goodsdetail/:id/:goodsid/:cid/:index",
         component: Goodsdetail,
         meta: {
             flag: false,

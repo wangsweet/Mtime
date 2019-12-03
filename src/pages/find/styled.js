@@ -80,7 +80,7 @@ export const Section = styled.div`
             p{
                 float:left;
                 padding:0.048rem 0;
-                width: 0.93rem;
+                width: 0.89rem;
                 margin: auto;
                 height: 0.78rem;
                 overflow: hidden;

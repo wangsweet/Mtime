@@ -1,0 +1,1 @@
+export const goodslistAsyncType = "GOODSLIST_ASYNC_TYPE"
