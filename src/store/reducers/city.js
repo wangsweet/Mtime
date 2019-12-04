@@ -3,7 +3,7 @@ import { cityList,cityChange } from "actions/city/cityListType"
 const defaultState = {
     cityName: "北京",
     cityId: 1,
-    cityList: []
+    cityList:JSON.parse(sessionStorage.getItem("cityList"))||[]
 }
 
 export default handleActions({
@@ -48,6 +48,7 @@ export default handleActions({
                 return -1;
             }
         })
+        sessionStorage.setItem("cityList",JSON.stringify(cityState.cityList))
         return cityState;
     },
     [cityChange]:(state,action)=>{
