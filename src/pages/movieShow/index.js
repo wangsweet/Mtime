@@ -16,7 +16,7 @@ class Movies extends React.Component {
         return (
             <div>
                 <Header>
-                    <span className="iconfont">{"\ue600"}</span>
+                    <span className="iconfont" onClick={this.goback.bind(this)}>{"\ue600"}</span>
                     <Table>
                         <li><Link to="/movieShow/movieShowing" className={flag ? 'active' : ''} onClick={this.props.handleShow.bind(this,1)}>正在热映</Link></li>
                         <li><Link to="/movieShow/movieComing" className={!flag ? 'active' : ''} onClick={this.props.handleCome.bind(this,0)}>即将上映</Link></li>
@@ -33,6 +33,9 @@ class Movies extends React.Component {
     }
     gosearch(){
         this.props.history.push("/search")
+    }
+    goback(){
+        this.props.history.push("/home")
     }
 }
 export default Movies

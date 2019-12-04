@@ -46,7 +46,9 @@ class City extends React.Component {
         )
     }
     componentDidMount() {
-        this.props.handleCityAsyncData()
+        if(!sessionStorage.getItem("cityList")){
+            this.props.handleCityAsyncData()
+        }
     }
     goback(){
         this.props.history.goBack()

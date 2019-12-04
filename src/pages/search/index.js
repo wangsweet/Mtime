@@ -49,7 +49,7 @@ class Search extends React.Component {
                 </Sear>
                 {
                     this.props.searchMovieList.cinemas?this.props.searchMovieList.cinemas.list.map((item,index)=>(
-                        <Cinema key={index}>
+                        <Cinema key={index} onClick={this.godetails.bind(this,item.id)}>
                             <p>{item.nm}<span>{item.sellPrice}元起</span></p>
                             <p><span>{item.addr}</span><span>{item.distance}</span></p>
                         </Cinema>
@@ -60,6 +60,9 @@ class Search extends React.Component {
     }
     godetail(id){
         this.props.history.push("/movieDetail/"+id)
+    }
+    godetails(id){
+        this.props.history.push("/cinemaDetail/"+id)
     }
     goback(){
         this.props.history.goBack()
