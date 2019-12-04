@@ -1,0 +1,1 @@
+export const newsAsyncType = "NEWS_ASYNC_TYPE"

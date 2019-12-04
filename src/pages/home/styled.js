@@ -154,13 +154,14 @@ export const Section = styled.div`
             p{
                 float:left;
                 padding:0.048rem 0;
-                width: 0.89rem;
+                width: 0.93rem;
                 margin: auto;
                 height: 0.78rem;
                 overflow: hidden;
                 
                 img{
                     width:100%;
+                    height:0.6rem;
                     border: 1px solid #d8d8d8;
                 }
             }

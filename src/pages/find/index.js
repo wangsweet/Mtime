@@ -1,13 +1,20 @@
 import React from "react";
-import { Main ,Section} from "./styled";
-class Find extends React.Component {
-    constructor() {
-        super()
-        this.state={
+import { Main, Section } from "./styled";
+import { connect } from "react-redux";
+import { mapStateToProps, mapDispatchToProps } from "./mapStore"
+import { withRouter } from "react-router-dom"
+import time from 'utils/time';    //这里请注意自己的路径
 
+@withRouter
+@connect(mapStateToProps, mapDispatchToProps)
+class Find extends React.Component {
+    componentDidMount() {
+        if (!JSON.parse(sessionStorage.getItem("news"))) {
+            this.props.handlenewsAsyncData();
         }
     }
     render() {
+        let { news } = this.props;
         return (
             <Main>
                 <nav className="newsnav">
@@ -45,41 +52,39 @@ class Find extends React.Component {
                 <Section>
                     <div className="m_bg_white todayhot">
                         <ul id="hotPoints">
-                            <li isgallary="true">
-                                <div className="table">
+                            {(JSON.parse(sessionStorage.getItem("news"))?JSON.parse(sessionStorage.getItem("news")):news).map((item) => (<li key={item.id}>
+                                {item.type === 1 ? <div className="table">
                                     <div className="todaytxt">
-                                        <h2>王珞丹谭卓文淇 三人合体大片惊艳亮相</h2>
+                                        <h2>{item.title}</h2>
                                         <p></p>
                                         <div className="table piclist">
-                                            <p className="td"><img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F152411.21777907.jpg&amp;width=190&amp;height=130&amp;clipType=4" alt=""/></p>
-                                            <p className="td"><img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F152415.93882911.jpg&amp;width=190&amp;height=130&amp;clipType=4" alt=""/></p>
-                                            <p className="td"><img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F152415.43161897.jpg&amp;width=190&amp;height=130&amp;clipType=4" alt=""/></p>
+                                            {item.images.map((child) => (<p className="td" key={child.gId}><img className="m_img img_box" src={child.url1} alt="" /></p>))}
                                         </div>
-                                        <p><time>9分钟前</time></p>
+                                        <p><time>{time(item.publishTime)}</time></p>
                                     </div>
-                                </div>
-                                <div className="table">
-                                    <div className="todaypic">
-                                        <img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F183605.58784611.jpg&amp;width=225&amp;height=156&amp;clipType=4" alt=""/>
-                                    </div>
-                                    <div className="todaytxt">
-                                        <h2>专访《睡梦医生》伊万麦克格雷格</h2>
-                                        <p><span></span></p>
-                                        <p><time>25分钟前</time></p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="todaypic_bigimg">
-                                        <img className="m_img img_box" src="//imgproxy.mtime.cn/get.ashx?uri=http%3A%2F%2Fimg5.mtime.cn%2Fsma%2F2019%2F11%2F27%2F180000.91850596.jpg&amp;width=370&amp;height=180&amp;clipType=4" alt=""/>
-                                        <i className="video_icon"></i>
-                                    </div>
-                                    <div className="todaytxt">
-                                        <h2>"红女巫"：和喜欢的各路导演合作，感觉像约会一样</h2>
-                                        <p><span></span></p>
-                                        <p><time>1小时前</time></p>
-                                    </div>
-                                </div>
-                            </li>
+                                </div> : item.type === 2 ?
+                                        <div className="table">
+                                            <div className="todaypic">
+                                                <img className="m_img img_box" src={item.image} alt="" />
+                                            </div>
+                                            <div className="todaytxt">
+                                                <h2>{item.title}</h2>
+                                                <p><span></span></p>
+                                                <p><time>{time(item.publishTime)}</time></p>
+                                            </div>
+                                        </div> :
+                                        <div>
+                                            <div className="todaypic_bigimg">
+                                                <img className="m_img img_box" src={item.image} alt="" />
+                                                <i className="video_icon"></i>
+                                            </div>
+                                            <div className="todaytxt">
+                                                <h2>{item.title}</h2>
+                                                <p><span></span></p>
+                                                <p><time>{time(item.publishTime)}</time></p>
+                                            </div>
+                                        </div>}
+                            </li>))}
                         </ul>
                         <div className="btn_viewmore" id="btnMore" >查看更多</div>
                     </div>

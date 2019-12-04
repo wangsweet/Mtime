@@ -9,7 +9,6 @@ export default handleActions({
         // console.log(action);
         let goodslistState = JSON.parse(JSON.stringify(state));
         goodslistState.goodslist = action.payload.data.content;
-        // console.log(goodslistState.goodslist);
         return goodslistState;
     },
 }, defaultState)

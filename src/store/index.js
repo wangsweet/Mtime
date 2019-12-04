@@ -12,6 +12,7 @@ import goodsdetail from "./reducers/goodsdetail"
 import cart from "./reducers/cart"
 import movie from "./reducers/movie"
 import cinema from "./reducers/cinema"
+import find from "./reducers/find"
 const reducers = combineReducers({
     city,
     login,
@@ -22,7 +23,8 @@ const reducers = combineReducers({
     goodsdetail,
     cart,
     movie,
-    cinema
+    cinema,
+    find
 })
 
 const store = createStore(reducers,composeWithDevTools(applyMiddleware(reduxThunk)));

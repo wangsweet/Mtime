@@ -126,7 +126,7 @@ background: #f6f6f6;
     }
     .shop04 {
         width: 100%;
-        height: 1.14rem;
+        height:0.94rem;
         bottom: 0;
         left: 0;
         z-index: 3;

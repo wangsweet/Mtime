@@ -11,13 +11,16 @@ class Cart extends React.Component {
             Snum: 0,
             checked: true
         }
-        this.state.data.forEach(item => {
-            item.flag = true;
-        });
+        if (this.state.data) {
+            this.state.data.forEach(item => {
+                item.flag = true;
+            });
+        }
+
     }
 
     render() {
-        let { data, Sprice, Snum,checked } = this.state;
+        let { data, Sprice, Snum, checked } = this.state;
         return (
             <Fragment>
                 {this.state.data ? <Fragment><Header>
@@ -29,7 +32,7 @@ class Cart extends React.Component {
                         <ul>
                             {data.map((item, index) => (<li className="mid" key={item.id}>
                                 <div className="first">
-                                    <input type="checkbox" style={{ float: "left", margin: " .028rem .12rem .12rem 0" }} checked={item.flag} onChange={this.handleOneCheck.bind(this,index)}/>
+                                    <input type="checkbox" style={{ float: "left", margin: " .028rem .12rem .12rem 0" }} checked={item.flag} onChange={this.handleOneCheck.bind(this, index)} />
                                     <h3 className="titlebox">
                                         <em className="zy">自营</em>{item.title}
                                     </h3>
@@ -43,7 +46,7 @@ class Cart extends React.Component {
                         </ul>
                     </Main>
                     <Footer>
-                        <div className="allCheck"><input type="checkbox" checked={checked} onChange={this.handleAllCheck.bind(this,checked)} /> 全选</div>
+                        <div className="allCheck"><input type="checkbox" checked={checked} onChange={this.handleAllCheck.bind(this, checked)} /> 全选</div>
                         <div className="summary">合计：<span>￥<i>{Sprice}</i></span></div>
                         <div className="jiesuan">结算(<span>{Snum}</span>)</div>
                     </Footer>
@@ -57,7 +60,7 @@ class Cart extends React.Component {
                                 <i className="i_emptycate"></i>
                                 <p>购物车还是空的，快去挑几件中意的商品吧</p>
                                 <div className="bigbtn">
-                                    <a className="btn_hui" href="/shop">去购物</a>
+                                    <a className="btn_hui" href="#/shop">去购物</a>
                                 </div>
                             </div>
                         </Main></Fragment>}
@@ -66,6 +69,7 @@ class Cart extends React.Component {
     }
     hanleBack() {
         this.props.history.goBack();
+        this.forceUpdate();
     }
     handleChange(e) {
         //   let val=e.target.value;
@@ -84,50 +88,59 @@ class Cart extends React.Component {
             this.handleSprice();
         }
     }
-    handleOneCheck(index){
-        this.state.data[index].flag=!this.state.data[index].flag;
-        let mark=true;
-        for(var i=0;i<this.state.data.length;i++){
-            if(!this.state.data[i].flag){
-                mark=false;
+    handleOneCheck(index) {
+        if (this.state.data) {
+            this.state.data[index].flag = !this.state.data[index].flag;
+            let mark = true;
+            for (var i = 0; i < this.state.data.length; i++) {
+                if (!this.state.data[i].flag) {
+                    mark = false;
+                }
             }
-        }
-        this.state.checked=mark;
-        this.forceUpdate();
-        this.handleSprice();
-
-    }
-    handleAllCheck(checked){
-        this.setState({
-            checked:!checked
-        },()=>{
-            this.state.data.forEach(item => {
-                item.flag=this.state.checked;
-            });
+            this.state.checked = mark;
             this.forceUpdate();
             this.handleSprice();
-        })
-    }
-    handleSprice(){
-        let sprice=0;
-        let snum=0;
-        for(var i=0;i<this.state.data.length;i++){
-            if(this.state.data[i].flag){
-                sprice+=(this.state.data[i].price*100)/100*this.state.data[i].num;
-                snum+=this.state.data[i].num;
-            }
-        }
-        this.setState({
-            Sprice:sprice
-        },()=>{
 
-        })
-        this.setState({
-            Snum:snum
-        })
-        this.forceUpdate();
+        }
+
     }
-    componentDidMount(){
+    handleAllCheck(checked) {
+        if (this.state.data) {
+            this.setState({
+                checked: !checked
+            }, () => {
+                this.state.data.forEach(item => {
+                    item.flag = this.state.checked;
+                });
+                this.forceUpdate();
+                this.handleSprice();
+            })
+        }
+
+    }
+    handleSprice() {
+        if (this.state.data) {
+            let sprice = 0;
+            let snum = 0;
+            for (var i = 0; i < this.state.data.length; i++) {
+                if (this.state.data[i].flag) {
+                    sprice += ((this.state.data[i].price*10) * this.state.data[i].num);
+                    snum += this.state.data[i].num;
+                }
+            }
+            this.setState({
+                Sprice: sprice/10
+            }, () => {
+
+            })
+            this.setState({
+                Snum: snum
+            })
+            this.forceUpdate();
+        }
+
+    }
+    componentDidMount() {
         this.handleSprice();
     }
 }

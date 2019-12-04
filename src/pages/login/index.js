@@ -12,7 +12,7 @@ class Login extends React.Component {
         return (
             <Fragment>
                 <Header>
-                    <span><i className="iconfont">{"\ue600"}</i></span>
+                    <span onClick={this.handleBack.bind(this)}><i className="iconfont">{"\ue600"}</i></span>
                     <img src="https://static1.mtime.cn/html5/20191122140130/images/2014/logo_mtime.png" alt="" />
                     <span>&nbsp;</span>
                 </Header>
@@ -44,6 +44,9 @@ class Login extends React.Component {
     }
     handleToRegiste(){
         this.props.history.push("/registe");
+    }
+    handleBack(){
+        this.props.history.goBack();
     }
 }
 

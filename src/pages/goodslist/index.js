@@ -8,7 +8,7 @@ import { withRouter } from "react-router-dom"
 @connect(mapStateToProps, mapDispatchToProps)
 class Goodslist extends React.Component {
     componentDidMount() {
-        this.props.handlegoodslistAsyncData(this.props.match.params.cid);
+            this.props.handlegoodslistAsyncData(this.props.match.params.cid);
     }
     render() {
         let { goodslist } = this.props;

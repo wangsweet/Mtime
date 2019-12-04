@@ -15,11 +15,13 @@ class Goodsdetail extends React.Component {
         }
     }
     componentDidMount() {
-        this.props.handlegoodsdetailAsyncData(this.props.match.params.cid, this.props.match.params.index);
-        this.props.handledetailImgAsyncData(this.props.match.params.goodsid);
+            this.props.handlegoodsdetailAsyncData(this.props.match.params.cid, this.props.match.params.index)
+        // if (!JSON.parse(sessionStorage.getItem("detailImg"))) {
+        //     this.props.handledetailImgAsyncData(this.props.match.params.goodsid);
+        // }
     }
     render() {
-        let { goodsdetail, detailImg, similar } = this.props;
+        let { goodsdetail, similar } = this.props;
         return (
             <Fragment>
                 <Header>
@@ -31,7 +33,7 @@ class Goodsdetail extends React.Component {
                     </span>
                 </Header>
                 <Main>
-                    {goodsdetail.map((item) => (<div key={item.id}>
+                    {goodsdetail.map((item, index) => (<div key={index}>
                         <div className="slide">
                             <div className="mui-slider-item mui-active">
                                 <div className="posterbox">
@@ -192,9 +194,9 @@ class Goodsdetail extends React.Component {
             obj.num = this.props.goodsdetail.length;
         }
         if (JSON.parse(sessionStorage.getItem("data"))) {
-            let list =JSON.parse(sessionStorage.getItem("data"))
+            let list = JSON.parse(sessionStorage.getItem("data"))
             data = list
-            for (var n = 0; n < data.length; n++) { 
+            for (var n = 0; n < data.length; n++) {
                 if (obj.id === data[n].id) {
                     data[n].num = data[n].num + 1;
                     mark = 1;

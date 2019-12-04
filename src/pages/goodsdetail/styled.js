@@ -282,6 +282,19 @@ export const Main = styled.div`
         }
     }
 }
+.tailsnotes {
+    padding: 0 .12rem .18rem .18rem;
+    background-color: #fff;
+        dt {
+        padding: .06rem 0;
+        font-size: .13rem;
+        }
+        dd {
+        color: #777;
+        position: relative;
+        font-size: .13rem;
+    }
+}
 .m_img {
     width: 100%;
     height: auto;
