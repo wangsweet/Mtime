@@ -14,8 +14,7 @@ class CinemaDetail extends React.Component {
         }
     }
     render() {
-        let { cinemaDetail } = this.props
-        console.log(cinemaDetail.showData)
+        let { cinemaDetail } = this.props;
         let { activeIndex, showIndex } = this.state
         return (
             <div>

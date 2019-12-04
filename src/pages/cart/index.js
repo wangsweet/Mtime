@@ -40,7 +40,7 @@ class Cart extends React.Component {
                                 <div className="two">
                                     <img src={item.pic} className="m_img" alt="" />
                                     <button className="add" onClick={this.handleAdd.bind(this, index)}>+</button><input type="text" value={item.num} className="num" onChange={this.handleChange.bind(this, index)} /> <button className="reduce" onClick={this.handleReduce.bind(this, index)}>-</button>
-                                    <span className="price">￥{item.price}<i>x{item.num}</i></span>
+                                    <span className="price">￥{item.price}<i>x{item.num}</i></span><span style={{fontSize:".12rem",color:"#c33",position:"absolute",right:"0.1rem"}} onClick={this.handleDelete.bind(this,index)}>删除</span>
                                 </div>
                             </li>))}
                         </ul>
@@ -73,6 +73,12 @@ class Cart extends React.Component {
     }
     handleChange(e) {
         //   let val=e.target.value;
+    }
+    handleDelete(index){
+        this.state.data.splice(index,1);
+        sessionStorage.setItem("data", JSON.stringify(this.state.data));
+        this.forceUpdate();
+        this.handleSprice();
     }
     handleAdd(index) {
         this.state.data[index].num++;

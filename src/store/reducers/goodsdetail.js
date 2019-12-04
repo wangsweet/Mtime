@@ -11,7 +11,7 @@ export default handleActions({
         let goodsdetailState = JSON.parse(JSON.stringify(state));
         var obj={};
         obj=action.payload.data.data.content[Number(action.payload.index)]
-        goodsdetailState.goodsdetail.push(obj);
+        goodsdetailState.goodsdetail = [obj];
         goodsdetailState.similar = action.payload.data.data.content;
         return goodsdetailState;
     },
